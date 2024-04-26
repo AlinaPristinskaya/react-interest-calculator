@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Balance from './Balans';
 import TransactionForm from './TransitionForm';
 
+// component App is class component stores a state with a balance and 
+//a variable with a Boolean value to display a notification about a negative balance,
+// and functions for processing data that it transmits as props to components Balance and TransactionForm
 class App extends Component {
   constructor(props) {
     super(props);

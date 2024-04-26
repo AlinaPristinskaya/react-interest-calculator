@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Stack from "react-bootstrap/Stack";
 
+// Conponent TransactionForm has its own state amount interestRate and button click functions
+// that simply pass data if it is needed to trigger methods in App and displays inputs and buttons
+
 class TransactionForm extends Component {
   constructor(props) {
     super(props);
