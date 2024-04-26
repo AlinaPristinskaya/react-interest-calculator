@@ -17,20 +17,21 @@ class App extends Component {
       isNegative: newBalance < 0 
     });
   }
-
+  // the function adds the deposit amount to the currently displayed bank balance
   handleDeposit = (amount) => {
     this.updateBalance(this.state.balance + parseFloat(amount));
   }
-
+ // function removes the entered amount from the currently displayed balance
   handleWithdraw = (amount) => {
     this.updateBalance(this.state.balance - parseFloat(amount));
   }
-
+  // The function receives a percentage of the current balance
+  // calculates how much it is in £ and adds to the current balance
   handleAddInterest = (rate) => {
     const interest = this.state.balance * parseFloat(rate) / 100;
     this.updateBalance(this.state.balance + interest);
   }
-
+  //The function subtracts 3% from the current balance
   handleChargeFees = () => {
     console.log(this.state.balance);
     const fees= this.state.balance * 3 /100
